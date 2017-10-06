@@ -1,0 +1,25 @@
+.wrapper {
+	padding-left: 16px;
+	padding-right: 16px;
+	max-width: 1232px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+
+	&--medium {
+		max-width: 980px;
+	}
+
+	.wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	&--b-margin {
+		margin-bottom: .01rem; /*but we actually dont need this, since we hid that in mobile look*/
+
+		@mixin atSmall {
+			margin-bottom: 3.875rem;
+		}
+	}
+}

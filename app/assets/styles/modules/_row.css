@@ -1,0 +1,34 @@
+.row {
+
+	@mixin clearfix;
+
+	&--gutters {
+		margin-right: -65px;
+	}
+
+	&--gutters > div {
+		padding-right: 65px;
+	}
+
+	@mixin atMedium {
+		&__medium-4 {
+			max-width: 33.33%;
+			float: left;	
+		}
+
+		&__medium-4-larger {
+			max-width: 37%;
+		}
+
+		&__medium-8 {
+			max-width: 66.66%;
+			float: left;
+		}
+
+		&__medium-8-smaller {
+			max-width: 63%;
+		}
+	}
+	
+
+}

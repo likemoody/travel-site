@@ -1,0 +1,7 @@
+.atmobile {
+	display: none;
+
+	@mixin atSmall {
+		display: block;
+	}
+}
