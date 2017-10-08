@@ -10,15 +10,9 @@
 		display: block;
 		margin: 0 auto;
 
-		width: 15%;			/*my own*/
-		height: auto;		/*my own*/
-
 		@mixin atSmall {
 			position: absolute;
 			left: 0;
-
-			width: 10%;		/*my own*/
-			height: auto;	/*my own*/
 		}
 	}
 

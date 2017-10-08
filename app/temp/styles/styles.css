@@ -799,21 +799,13 @@ a {
 .feature-item__icon {
 		display: block;
 		margin: 0 auto;
-
-		width: 15%;			/*my own*/
-		height: auto;
 	}
-
-/*my own*/
 
 @media (min-width: 530px) {
 
 .feature-item__icon {
 			position: absolute;
-			left: 0;
-
-			width: 10%;		/*my own*/
-			height: auto	/*my own*/
+			left: 0
 	}
 	}
 
