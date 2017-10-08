@@ -457,7 +457,7 @@ body {
 
 img {
 	max-width: 100%;
-	width: auto;
+	height: auto;
 }
 
 * {
@@ -675,8 +675,16 @@ a {
 		margin-right: -65px;
 	}
 
+.row--gutters-large {
+		margin-right: -100px;
+	}
+
 .row--gutters > div {
 		padding-right: 65px;
+	}
+
+.row--gutters-large > div {
+		padding-right: 100px;
 	}
 
 @media (min-width: 800px) {
@@ -687,6 +695,11 @@ a {
 
 		.row__medium-4-larger {
 			max-width: 37%;
+		}
+
+		.row__medium-6 {
+			float: left;
+			width: 50%;
 		}
 
 		.row__medium-8 {
@@ -712,17 +725,109 @@ a {
 
 .generic-content-container p {
 		line-height: 1.65;
-		margin: 1.8rem 0; 
+		margin: 0 0 1.8rem 0; 
 		font-weight: 300;
+		font-size: 0.9rem;
+
+		text-align: justify;	
 	}
+
+/*my own*/
 
 @media (min-width: 530px) {
 
 .generic-content-container p {
-			font-size: 1.125rem
+			font-size: 1.125rem;
+			font-size: 1rem;
+			text-align: left		/*my own (dependence)*/	
 	}
 	}
 
 .generic-content-container p a {
 		font-weight: 700;
+	}
+
+.section-title {
+	font-size: 2.2rem;
+	font-weight: 200;
+	text-align: center;
+	margin-bottom: 5rem;
+}
+
+@media (min-width: 530px) {
+
+.section-title {
+		font-size: 3.75rem
+}
+	}
+
+.section-title strong {
+		font-weight: 500;
+	}
+
+.section-title__icon {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 0.5rem;
+	}
+
+@media (min-width: 530px) {
+
+.section-title__icon {
+			display: inline-block;
+			margin-right: .5rem;
+			margin-left: 0;
+			margin-bottom: 0
+	}
+	}
+
+.feature-item {
+	position: relative;
+	padding-bottom: 2.5rem;
+}
+
+/*why margin property doesnt work here?*/
+
+@media (min-width: 530px) {
+
+.feature-item {
+		padding-left: 100px
+}
+	}
+
+.feature-item__icon {
+		display: block;
+		margin: 0 auto;
+
+		width: 15%;			/*my own*/
+		height: auto;
+	}
+
+/*my own*/
+
+@media (min-width: 530px) {
+
+.feature-item__icon {
+			position: absolute;
+			left: 0;
+
+			width: 10%;		/*my own*/
+			height: auto	/*my own*/
+	}
+	}
+
+.feature-item__title {
+		font-size: 1.6rem;
+		font-weight: 200;
+		margin-bottom: 0.8rem;
+		text-align: center;
+	}
+
+@media (min-width: 530px) {
+
+.feature-item__title {
+			font-size: 1.875rem;
+			text-align: left
+	}
 	}

@@ -1,0 +1,36 @@
+.feature-item {
+	position: relative;
+	padding-bottom: 2.5rem; /*why margin property doesnt work here?*/
+
+	@mixin atSmall {
+		padding-left: 100px;
+	}
+
+	&__icon {
+		display: block;
+		margin: 0 auto;
+
+		width: 15%;			/*my own*/
+		height: auto;		/*my own*/
+
+		@mixin atSmall {
+			position: absolute;
+			left: 0;
+
+			width: 10%;		/*my own*/
+			height: auto;	/*my own*/
+		}
+	}
+
+	&__title {
+		font-size: 1.6rem;
+		font-weight: 200;
+		margin-bottom: 0.8rem;
+		text-align: center;
+
+		@mixin atSmall {
+			font-size: 1.875rem;
+			text-align: left;
+		}
+	}
+}
