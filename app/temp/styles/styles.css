@@ -479,6 +479,7 @@ a {
 	}
 
 .large-hero__text-content {
+		padding-top: 88px;
 		position: absolute;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
@@ -486,6 +487,13 @@ a {
 		left: 0;
 		width: 100%; /*important for centering*/
 		text-align: center;
+	}
+
+@media (min-width: 800px) {
+
+.large-hero__text-content {
+			padding-top: 60px
+	}
 	}
 
 .large-hero__title {
@@ -520,7 +528,7 @@ a {
 
 .large-hero__description {
 		color: #fff;
-		font-weight: 100;
+		font-weight: 400;
 		text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
 		max-width: 30rem;
 		margin-left: auto;
@@ -531,7 +539,8 @@ a {
 @media (min-width: 530px) {
 
 .large-hero__description {
-			font-size: 1.875rem
+			font-size: 1.875rem;
+			font-weight: 200
 	}
 	}
 
@@ -695,7 +704,7 @@ a {
 @media (min-width: 530px) {
 
 .headline--small {
-		font-size: 1.875rem
+			font-size: 1.875rem
 	}
 	}
 
@@ -706,7 +715,7 @@ a {
 	}
 
 .headline--light {
-		font-weight: 100;
+		font-weight: 300;
 	}
 
 .headline--b-margin-small {
@@ -868,7 +877,7 @@ a {
 .generic-content-container p {
 		line-height: 1.65;
 		margin: 0 0 1.8rem 0; 
-		font-weight: 300;
+		font-weight: 400;
 		font-size: 0.9rem;
 
 		text-align: justify;	
@@ -904,7 +913,7 @@ a {
 	}
 
 .section-title strong {
-		font-weight: 500;
+		font-weight: 400;
 	}
 
 .section-title__icon {
@@ -1111,4 +1120,130 @@ Instead edit templates/sprite.css.*/
 		width: 34.75px;
 		height: 42px;
 		background-position: 36.69752421959096% 45.792307692307695%;
+	}
+
+.site-footer {
+	background-color: #2f5572;
+	color: #fff;
+	padding: .5rem 0; /*why does it work?*/
+	text-align: center;
+
+}
+
+.site-footer__text {
+		display: block;
+		margin-bottom: 1rem;
+		font-weight: 200;
+	}
+
+@media (min-width: 800px) {
+
+.site-footer__text {
+			display: inline;
+			margin-bottom: 0;
+			margin-right: 1.5rem
+	}
+	}
+
+.site-header {
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	padding: 10px 0;
+
+}
+
+@media (min-width: 800px) {
+
+.site-header {
+		background-color: rgba(47,85,114, 0.3)
+
+}
+	}
+
+.site-header__btn-container {
+		float: right;
+	}
+
+.site-header__logo {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		-webkit-transform: translateX(-50%) scale(.8);
+		        transform: translateX(-50%) scale(.8);
+		-webkit-transform-origin: 50% 0%;
+		        transform-origin: 50% 0%;
+		background-color: #2f5572;
+		padding: 25px 36px;
+	}
+
+@media (min-width: 800px) {
+
+.site-header__logo {
+			left: auto;
+			-webkit-transform: translateX(0);
+			        transform: translateX(0);
+			padding: 25px 36px
+	}
+	}
+
+.site-header__logo__graphic {
+		text-indent: -9999px;
+	}
+
+.site-header__menu-icon {
+		width: 20px;
+		height: 20px;
+		background-color: #fff;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		cursor: pointer;
+	}
+
+@media (min-width: 800px) {
+
+.site-header__menu-icon {
+			display: none
+	}
+	}
+
+.site-header__menu-content {
+		display: none;
+	}
+
+@media (min-width: 800px) {
+
+.site-header__menu-content {
+			display: block
+	}
+	}
+
+.primary-nav__pull-right {
+		float: right;
+	}
+
+.primary-nav ul {
+		margin: 0;
+		padding: 0;
+	}
+
+.primary-nav ul::after {
+		content: "";
+		clear: both;
+		display: table; /*Why?*/
+	}
+
+.primary-nav li {
+		float: left;
+		list-style: none;
+		padding-right: 1rem;
+	}
+
+.primary-nav a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 200;
+		display: block;
+		padding: 12px 0;
 	}
