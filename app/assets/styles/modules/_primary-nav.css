@@ -1,0 +1,27 @@
+.primary-nav {
+
+	&__pull-right {
+		float: right;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		@mixin clearfix;
+	}
+
+	li {
+		float: left;
+		list-style: none;
+		padding-right: 1rem;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: none;
+		font-weight: 200;
+		display: block;
+		padding: 12px 0;
+	}
+
+}
