@@ -1,7 +1,11 @@
 var $ = require('jquery');
 var Person = require('./modules/Person');
 
+<<<<<<< HEAD
 // alert('Sure!');
+=======
+alert('Sure!');
+>>>>>>> res_header
 
 var john = new Person("John", "blue");
 john.greet();

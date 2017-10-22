@@ -7,12 +7,17 @@
 	}
 
 	&__text-content {
+		padding-top: 88px;
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
 		left: 0;
 		width: 100%; /*important for centering*/
 		text-align: center;
+
+		@mixin atMedium {
+			padding-top: 60px;
+		}
 	}
 
 	&__title {
@@ -40,7 +45,7 @@
 
 	&__description {
 		color: #fff;
-		font-weight: 100;
+		font-weight: 400;
 		text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
 		max-width: 30rem;
 		margin-left: auto;
@@ -49,6 +54,7 @@
 
 		@mixin atSmall {
 			font-size: 1.875rem;
+			font-weight: 200;
 		}
 	}
 }
