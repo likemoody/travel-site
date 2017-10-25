@@ -1,7 +1,14 @@
 .primary-nav {
+	padding-top: 10px;
+
+	@mixin atMedium {
+		padding-top: 0px;
+	}
 
 	&__pull-right {
-		float: right;
+		@mixin atMedium {
+			float: right;
+		}
 	}
 
 	ul {
@@ -11,17 +18,41 @@
 	}
 
 	li {
-		float: left;
 		list-style: none;
-		padding-right: 1rem;
+		padding-right: 1px;
+		display: inline-block;
+
+		@mixin atMedium {
+			float: left;
+			display: block;
+			padding-right: 20px;	
+		}
+	}
+
+	/*added in course*/
+	li:last-child {
+		padding-right: 0;
 	}
 
 	a {
 		color: #fff;
 		text-decoration: none;
 		font-weight: 200;
+		font-size: .92rem; /*adding forced - hasnt been added in course*/
 		display: block;
-		padding: 12px 0;
+		padding: 10px 8px;
+		background-color: rgba($mainBlue, .7);
+		
+		@mixin atMedium {
+			padding: 12px 0;
+		}
+
 	}
 
 }
+
+
+
+
+
+
