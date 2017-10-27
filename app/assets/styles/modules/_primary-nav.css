@@ -32,6 +32,10 @@
 	/*added in course*/
 	li:last-child {
 		padding-right: 0;
+
+		@mixin atMedium {
+			padding-right: 20px;	
+		}
 	}
 
 	a {
@@ -45,6 +49,9 @@
 		
 		@mixin atMedium {
 			padding: 12px 0;
+			font-weight: 200;
+			font-size: 1rem;
+			background-color: transparent;
 		}
 
 	}

@@ -1204,8 +1204,7 @@ Instead edit templates/sprite.css.*/
 
 .site-header__menu-icon {
 		width: 20px;
-		height: 20px;
-		background-color: #fff;
+		height: 19px;
 		position: absolute;
 		top: 15px;
 		right: 15px;
@@ -1213,12 +1212,71 @@ Instead edit templates/sprite.css.*/
 		z-index: 2;
 	}
 
+.site-header__menu-icon::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #fff;
+			-webkit-transform-origin: 0 0;
+			        transform-origin: 0 0;
+			-webkit-transition: all .4s ease-out;
+			transition: all .4s ease-out;
+		}
+
+.site-header__menu-icon__middle {
+			position: absolute;
+			top: 8px;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #fff;
+			-webkit-transform-origin: 0% 50%;
+			        transform-origin: 0% 50%;
+			-webkit-transition: all .3s ease-out;
+			transition: all .3s ease-out;
+		}
+
+.site-header__menu-icon::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 20px;
+			height: 3px;
+			background-color: #fff;
+			-webkit-transform-origin: 0 100%;
+			        transform-origin: 0 100%;
+			-webkit-transition: all .4s ease-out;
+			transition: all .4s ease-out;
+		}
+
 @media (min-width: 800px) {
 
 .site-header__menu-icon {
 			display: none
 	}
 	}
+
+.site-header__menu-icon--close-x::before {
+			-webkit-transform: rotate(45deg) scaleX(1.2);
+			        transform: rotate(45deg) scaleX(1.2); /*originally Brad gives 1.25 for scaleX*/
+		}
+
+.site-header__menu-icon--close-x .site-header__menu-icon__middle {
+			opacity: 0;
+			-webkit-transform: scaleX(0);
+			        transform: scaleX(0);
+		}
+
+/*------------------VERY INTERESTING TRICK!!!*/
+
+.site-header__menu-icon--close-x::after {
+			-webkit-transform: rotate(-45deg) scaleX(1.2);
+			        transform: rotate(-45deg) scaleX(1.2); /*originally Brad gives 1.25 for scaleX*/
+		}
 
 .site-header__menu-content {
 		-webkit-transition: all .4s ease-out;
@@ -1303,6 +1361,13 @@ Instead edit templates/sprite.css.*/
 		padding-right: 0;
 	}
 
+@media (min-width: 800px) {
+
+.primary-nav li:last-child {
+			padding-right: 20px
+	}
+	}
+
 .primary-nav a {
 		color: #fff;
 		text-decoration: none;
@@ -1317,7 +1382,10 @@ Instead edit templates/sprite.css.*/
 @media (min-width: 800px) {
 
 .primary-nav a {
-			padding: 12px 0
+			padding: 12px 0;
+			font-weight: 200;
+			font-size: 1rem;
+			background-color: transparent
 
 	}
 	}
