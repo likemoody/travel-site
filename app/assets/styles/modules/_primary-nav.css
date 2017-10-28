@@ -52,6 +52,10 @@
 			font-weight: 200;
 			font-size: 1rem;
 			background-color: transparent;
+
+			&.is-current-link { /*. means "only if it has a class [class-name]"*/
+				color: #fabb69;
+			} /*-------VERY INTERESTING THING!!!*/
 		}
 
 	}
