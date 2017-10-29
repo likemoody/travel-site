@@ -957,6 +957,7 @@ a {
 
 .section-title--less-margin {
 		margin-bottom: 0; /*Brad gives here 1.2rem*/
+		margin-top: 0;
 	}
 
 .section-title--blue {
@@ -1438,7 +1439,31 @@ Instead edit templates/sprite.css.*/
 
 	z-index: 5;
 	background-color: rgba(255, 255, 255, .95);
+ 
+	opacity: 0;
+	visibility: hidden; /* ??? vs display:none;*/
+	-webkit-transform: scale(1.3);
+	        transform: scale(1.3);
+
+	-webkit-transition: all .3s ease-out;
+
+	transition: all .3s ease-out;
 }
+
+.modal--is-visible {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: scale(1);
+		        transform: scale(1);
+	}
+
+.modal__inner {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		        transform: translateY(-50%);
+	}
 
 .modal__description {
 		font-size: 1.5rem;
@@ -1446,6 +1471,23 @@ Instead edit templates/sprite.css.*/
 		text-align: center;
 		line-height: 1.5;
 	}
+
+.modal__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 2rem;
+		-webkit-transform: scaleX(1.3);
+		        transform: scaleX(1.3);
+		-webkit-transform-origin: 100% 0;
+		        transform-origin: 100% 0;
+		cursor: pointer;
+		color: #2f5572;
+	}
+
+.modal__close:hover {
+			color: #d59541;
+		}
 
 .social-icons {
 	text-align: center;
@@ -1456,7 +1498,8 @@ Instead edit templates/sprite.css.*/
 		display: inline-block;
 		width: 33%;
 		height: 85px;
-		margin: 0 0  5px 5px;
+		margin: 0 0 5px 5px;
+		overflow: hidden;
 	}
 
 @media (min-width: 530px) {
@@ -1476,3 +1519,11 @@ Instead edit templates/sprite.css.*/
 			-webkit-transform: translate(-50%, -50%);
 			        transform: translate(-50%, -50%);
 		}
+
+@media (min-width: 530px) {
+
+.social-icons__icon .icon {
+				-webkit-transform: translate(-10%, -10%) scale(1.5);
+				        transform: translate(-10%, -10%) scale(1.5)
+		}
+	}

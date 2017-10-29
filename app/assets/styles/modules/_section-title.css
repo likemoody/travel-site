@@ -44,6 +44,7 @@
 
 	&--less-margin {
 		margin-bottom: 0; /*Brad gives here 1.2rem*/
+		margin-top: 0;
 	}
 
 	&--blue {
