@@ -11268,6 +11268,7 @@ var StickyHeader = function () {
 	function StickyHeader() {
 		_classCallCheck(this, StickyHeader);
 
+		this.lazyImages = (0, _jquery2.default)(".lazyload"); /*getting all lazyload images*/
 		/*sticky menu ITSELF gradually changes color on scroll*/
 		this.siteHeader = (0, _jquery2.default)(".site-header"); /*getting the DOM element to work with*/
 		this.headerTriggerElement = (0, _jquery2.default)(".large-hero__title"); /*getting the DOM element for creating a waypoint*/
@@ -11278,9 +11279,18 @@ var StickyHeader = function () {
 		this.headerLinks = (0, _jquery2.default)(".primary-nav a"); /*collection of all links in the nav section*/
 		this.createPageSectionWaypoints(); /*calling method on page start*/
 		this.addSmoothScrolling();
+		this.refreshWaypoints();
 	}
 
 	_createClass(StickyHeader, [{
+		key: 'refreshWaypoints',
+		value: function refreshWaypoints() {
+			this.lazyImages.on('load', function () {
+				Waypoint.refreshAll();
+			});
+		} /*refreshing all waypoints every time a new image loads on the page - fixing the issue with lazyload*/
+
+	}, {
 		key: 'addSmoothScrolling',
 		value: function addSmoothScrolling() {
 			this.headerLinks.smoothScroll();

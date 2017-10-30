@@ -31,8 +31,10 @@
 		background-color: #e0e6ef;
 		
 		@mixin atLarge {
-			background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
-			background-size: cover;	
+			&.lazyloaded { /*add these properties only if [&.classname] class is there*/ 
+				background: url('/assets/images/testimonials-bg.jpg') top center no-repeat;
+				background-size: cover;	
+			}
 		}	
 	}
 	

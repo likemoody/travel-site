@@ -4,6 +4,7 @@ import smoothScroll from 'jquery-smooth-scroll';
 
 class StickyHeader {
 	constructor() {
+		this.lazyImages = $(".lazyload"); /*getting all lazyload images*/
 		/*sticky menu ITSELF gradually changes color on scroll*/
 		this.siteHeader = $(".site-header"); /*getting the DOM element to work with*/
 		this.headerTriggerElement = $(".large-hero__title"); /*getting the DOM element for creating a waypoint*/
@@ -14,7 +15,14 @@ class StickyHeader {
 		this.headerLinks = $(".primary-nav a"); /*collection of all links in the nav section*/
 		this.createPageSectionWaypoints(); /*calling method on page start*/
 		this.addSmoothScrolling();
+		this.refreshWaypoints();
 	}
+
+	refreshWaypoints() {
+		this.lazyImages.on('load', function() {
+			Waypoint.refreshAll();
+		});
+	} /*refreshing all waypoints every time a new image loads on the page - fixing the issue with lazyload*/
 
 	addSmoothScrolling() {
 		this.headerLinks.smoothScroll();
