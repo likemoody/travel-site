@@ -2,10 +2,14 @@
 Instead edit templates/sprite.css.*/
 
 {{#shapes}}
-{{#first}}
-	.icon {
-		background-image: url('/assets/images/sprites/{{{sprite}}}');
-	}
+	{{#first}}
+		.icon {
+			background-image: url('/assets/images/sprites/{{{sprite}}}');
+		}
+
+		.no-svg .icon {
+			background-image: url('/assets/images/sprites/{{#replaceSvgWithPng}}{{{sprite}}}{{/replaceSvgWithPng}}');
+		}
 	{{/first}}
 
 	.icon--{{base}} {

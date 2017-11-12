@@ -87,18 +87,20 @@
 
 	/*Begin Equal Hight Rules*/
 
-	&--equal-hight-at-medium {
+/*	for future purposes
+	.flexbox &--equal-hight-at-medium {
 		@mixin atMedium {
 			display: flex;
 		}
 
-		& > div {						/*why?*/
+		& > div {
 			float: none;
 			display: flex; 
 		}
 	}
+*/
 
-	&--equal-hight-at-large {
+	.flexbox &--equal-hight-at-large {
 		@mixin atLarge {
 			display: flex;
 		}
