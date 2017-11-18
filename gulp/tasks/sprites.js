@@ -4,8 +4,6 @@ rename = require('gulp-rename'),
 del = require('del'),
 svg2png = require('gulp-svg2png');
 
-
-
 var config = {
 	shape: {
 		spacing: {
@@ -64,7 +62,7 @@ gulp.task('endClean', ['copySpriteCSS', 'copySpriteGraphic'], function () {
 	return del('./app/temp/sprite');
 });
 
-gulp.task('icon', ['beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
+gulp.task('icons', ['beginClean', 'createSprite', 'createPngCopy', 'copySpriteGraphic', 'copySpriteCSS', 'endClean']);
 
 
 
